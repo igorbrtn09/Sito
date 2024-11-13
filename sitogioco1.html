@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Sito di Giochi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Benvenuto nel mio sito di giochi!</h1>
+        </div>
+        <button id="theme-toggle" class="theme-toggle">Modalità Dark</button>
+    </header>
+
+    <main>
+        <section id="game-container">
+            <div class="games">
+                <div class="game">
+				<h3>TRIS</h3>
+					<a href="Mio Sito Gioco 1.html" class="game-button">Inizia Gioco</a>
+				</div>
+                <div class="game">
+				<h3>PONG</h3>
+					<a href="Mio Sito Gioco 2.html" class="game-button">Inizia Gioco</a>
+				</div>
+                <div class="game">
+				<h3>SNAKE</h3>
+					<a href="Mio Sito Gioco 3.html" class="game-button">Inizia Gioco</a>
+				</div>
+                <div class="game">
+				<h3>BREAKOUT</h3>
+					<a href="Mio Sito Gioco 4.html" class="game-button">Inizia Gioco</a>
+				</div>
+                <div class="game">
+				<h3>TETRIS</h3>
+					<a href="Mio Sito Gioco 5.html" class="game-button">Inizia Gioco</a>
+				</div>
+                <div class="game">
+				<h3>BOMBERMAN</h3>
+					<a href="Mio Sito Gioco 6.html" class="game-button">Inizia Gioco</a>
+				</div>
+				<div class="game">
+				<h3>FROG</h3>
+					<a href="Mio Sito Gioco 7.html" class="game-button">Inizia Gioco</a>
+				</div>
+				<div class="game">
+				<h3>MISSLE-COM</h3>
+					<a href="Mio Sito Gioco 8.html" class="game-button">Inizia Gioco</a>
+				</div>
+				<div class="game">
+				<h3>SOKOBAN</h3>
+					<a href="Mio Sito Gioco 9.html" class="game-button">Inizia Gioco</a>
+				</div>
+				<div class="game">
+				<h3>DOODLE JMP</h3>
+					<a href="Mio Sito Gioco 10.html" class="game-button">Inizia Gioco</a>
+				</div>
+				<div class="game">
+				<h3>BOOST</h3>
+					<a href="Mio Sito Gioco 11.html" class="game-button">Inizia Gioco</a>
+				</div>
+				<div class="game">
+				<h3>HELICOPTER</h3>
+					<a href="Mio Sito Gioco 12.html" class="game-button">Inizia Gioco</a>
+				</div>
+				<div class="game">
+				<h3>BLOCK DUDE</h3>
+					<a href="Mio Sito Gioco 13.html" class="game-button">Inizia Gioco</a>
+				</div>
+				<div class="game">
+				<h3>PACMAN</h3>
+					<a href="Mio Sito Gioco 14.html" class="game-button">Inizia Gioco</a>
+				</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Per qualsiasi richiesta/probemi/domande contattate: wolfhucr@gmail.com</p>
+    </footer>
+
+    <script>
+        // Funzione per cambiare il tema
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Cambia il tema quando l'utente clicca sul bottone
+        themeToggleButton.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'light') {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeToggleButton.textContent = 'Modalità Light';  // Cambia il testo del bottone
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeToggleButton.textContent = 'Modalità Dark';
+            }
+        });
+
+        // Funzioni per i giochi (puoi aggiungere codice specifico qui)
+        function startGame1() { alert("Hai iniziato il Gioco 1!"); }
+        function startGame2() { alert("Hai iniziato il Gioco 2!"); }
+        function startGame3() { alert("Hai iniziato il Gioco 3!"); }
+        function startGame4() { alert("Hai iniziato il Gioco 4!"); }
+        function startGame5() { alert("Hai iniziato il Gioco 5!"); }
+        function startGame6() { alert("Hai iniziato il Gioco 6!"); }
+    </script>
+</body>
+</html>

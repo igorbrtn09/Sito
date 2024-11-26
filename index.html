@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La F1</title>
+    <style>
+        /* Variabili CSS */
+        :root {
+            --background-light: #f0f0f0;
+            --background-dark: #121212;
+            --text-light: #000;
+            --text-dark: #fff;
+            --primary-color: #ff0000;
+            --accent-color: #ff5722;
+            --button-hover: #d32f2f;
+        }
+
+        /* Stile globale */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--text-dark);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Contenuto principale */
+        .main-content {
+            text-align: center;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: var(--background-light);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .main-content a {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            background: var(--primary-color);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .main-content a:hover {
+            background: var(--button-hover);
+            transform: translateY(-5px);
+        }
+
+        /* Tema scuro */
+        .dark-mode {
+            --background-light: #121212;
+            --text-light: #fff;
+            --primary-color: #ff5722;
+            --accent-color: #e64a19;
+            --button-hover: #b71c1c;
+        }
+
+        /* Pulsante cambio tema */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--button-hover);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .main-content a {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>La Formula 1</h1>
+        <p>Benvenuti nel mondo della velocità</p>
+    </header>
+
+    <!-- Contenuto principale -->
+    <div class="main-content">
+        <a href="news.html">News</a>
+        <a href="pilots.html">Piloti</a>
+        <a href="calendar.html">Calendario</a>
+        <a href="risultati.html">Risultati dell'ultima gara</a>
+		<a href="champ.html">Tutti i campioni di F1</a>
+    </div>
+
+    <!-- Pulsante cambio tema -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+        🌙
+    </button>
+
+    <!-- Script per il cambio tema -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

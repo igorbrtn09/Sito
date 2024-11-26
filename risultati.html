@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Formula 1 2024</title>
+    <style>
+        /* Variabili CSS */
+        :root {
+            --background-light: #f5f5f5;
+            --background-dark: #1c1c1c;
+            --text-light: #000;
+            --text-dark: #fff;
+            --primary-color: #ff0000;
+            --accent-color: #ff5722;
+            --table-header-bg: #ff5722;
+            --table-row-bg: #fff;
+            --table-row-bg-alt: #f9f9f9;
+            --table-border-color: #ddd;
+            --table-hover-bg: #ffe0b2;
+            --button-hover: #d32f2f;
+        }
+
+        /* Stile globale */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--text-dark);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Contenuto principale */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #calendario table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #calendario thead {
+            background-color: var(--table-header-bg);
+            color: var(--text-dark);
+        }
+
+        #calendario th, #calendario td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid var(--table-border-color);
+        }
+
+        #calendario tbody tr:nth-child(even) {
+            background-color: var(--table-row-bg-alt);
+        }
+
+        #calendario tbody tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px;
+        }
+
+        /* Tema scuro */
+        .dark-mode {
+            --background-light: #121212;
+            --text-light: #fff;
+            --table-row-bg: #2e2e2e;
+            --table-row-bg-alt: #1c1c1c;
+            --table-border-color: #555;
+            --table-hover-bg: #333;
+            --primary-color: #ff5722;
+            --accent-color: #e64a19;
+        }
+
+        /* Pulsante cambio tema */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--button-hover);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            #calendario th, #calendario td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Las Vegas GP</h1>
+    </header>
+
+    <!-- Contenuto principale -->
+    <main>
+        <section id="calendario">
+            <table>
+                <thead>
+                    <tr>
+                        <th>1</th>
+                        <th>Russel</th>
+                        <th>1:22:05.969</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>2</td>
+                        <td>Hamilton</td>
+                        <td>+7.313</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sainz</td>
+                        <td>+11.906</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Leclerc</td>
+                        <td>+14.283</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Verstappen</td>
+                        <td>+16.582</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Norris</td>
+                        <td>+43.385</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Piastri</td>
+                        <td>+51.365</td>
+                    </tr>
+					<tr>
+                        <td>8</td>
+                        <td>Hulkenberg</td>
+                        <td>+59.808</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Tsunoda</td>
+                        <td>+62.808</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Perez</td>
+                        <td>+63.114</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Alonso</td>
+                        <td>+69.195</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Magnussen</td>
+                        <td>+69.803</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Zhou</td>
+                        <td>+74.085</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Colapinto</td>
+                        <td>+75.172</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Stroll</td>
+                        <td>+84.102</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Lawson</td>
+                        <td>+91.005</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Ocon</td>
+                        <td>+ 1 giro</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Bottas</td>
+                        <td>+ 1 giro</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Albon</td>
+                        <td>DNF</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Gasly</td>
+                        <td>DNF</td>
+                    </tr>
+                    <!-- Aggiungi altre righe qui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Da Alex Casson e Igor Berton.</p>
+        <a href="index.html">Pagina principale</a>
+	</footer>
+
+    <!-- Pulsante cambio tema -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+        🌙
+    </button>
+
+    <!-- Script per il cambio tema -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

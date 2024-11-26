@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 News</title>
+    <style>
+        /* Variabili CSS */
+        :root {
+            --background-light: #f0f0f0;
+            --background-dark: #121212;
+            --text-light: #000;
+            --text-dark: #fff;
+            --primary-color: #ff0000;
+            --accent-color: #ff5722;
+            --button-hover: #d32f2f;
+        }
+
+        /* Stile globale */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--text-dark);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Contenuto principale */
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+
+        section#news {
+            background: var(--background-light);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        section#news h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        article {
+            margin-bottom: 30px;
+        }
+
+        article h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        article img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px;
+        }
+
+        /* Tema scuro */
+        .dark-mode {
+            --background-light: #121212;
+            --text-light: #fff;
+            --primary-color: #ff5722;
+            --accent-color: #e64a19;
+            --button-hover: #b71c1c;
+        }
+
+        /* Pulsante cambio tema */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--button-hover);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section#news h2 {
+                font-size: 1.8rem;
+            }
+
+            article h3 {
+                font-size: 1.3rem;
+            }
+
+            article p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Formula 1 News</h1>
+    </header>
+
+    <!-- Contenuto principale -->
+    <main>
+        <section id="news">
+            <h2>Ultime Notizie</h2>
+            <article>
+                <h3>Andretti Cadillac sarà l'undicesimo team dal 2026</h3>
+                <p>
+                    Finisce una guerra finalmente tra la FIA e Andretti che finalmente il team Americano entrerà in griglia a partire dal 2026.
+                </p>
+                <img src="Cadillac.jpg" alt="Vettura 2026 cadillac">
+            </article>
+        </section>
+    </main>
+	<main>
+        <section id="news">
+            <h2>Ultime Notizie</h2>
+            <article>
+                <h3>Russell vince e per Verstappen sono 4</h3>
+                <p>
+                    Russell domina tutto il weekend e la Mercedes porta il 1-2 a Las Vegas. Verstappen arriva quinto e matematicamente
+                    vince il suo quarto mondiale in carriera.
+                </p>
+                <img src="Verstappen.jpg" alt="Verstappen che festeggia">
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Da Alex Casson e Igor Berton.</p>
+        <a href="index.html">Pagina principale</a>
+	</footer>
+
+    <!-- Pulsante cambio tema -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+        🌙
+    </button>
+
+    <!-- Script per il cambio tema -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

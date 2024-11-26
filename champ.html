@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campioni Mondiali di Formula 1</title>
+    <style>
+        /* Variabili CSS */
+        :root {
+            --background-light: #f5f5f5;
+            --background-dark: #1c1c1c;
+            --text-light: #000;
+            --text-dark: #fff;
+            --primary-color: #ff0000;
+            --accent-color: #ff5722;
+            --card-bg-light: #fff;
+            --card-bg-dark: #2e2e2e;
+            --button-hover: #d32f2f;
+        }
+
+        /* Stile globale */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--text-dark);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Contenuto principale */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        section#campioni {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .campione {
+            background: var(--card-bg-light);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .campione h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .campione p {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .campione:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px;
+        }
+
+        /* Tema scuro */
+        .dark-mode {
+            --background-light: #121212;
+            --text-light: #fff;
+            --card-bg-light: #2e2e2e;
+            --primary-color: #ff5722;
+            --accent-color: #e64a19;
+            --button-hover: #b71c1c;
+        }
+
+        /* Pulsante cambio tema */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--button-hover);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .campione h3 {
+                font-size: 1.3rem;
+            }
+
+            .campione p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Campioni Mondiali di Formula 1</h1>
+    </header>
+
+    <!-- Contenuto principale -->
+    <main>
+        <section id="campioni">
+            <!-- Inizio campioni in ordine cronologico -->
+            <div class="campione">
+                <h3>Giuseppe Farina</h3>
+                <p>1950 (Alfa Romeo)</p>
+            </div>
+            <div class="campione">
+                <h3>Juan Manuel Fangio</h3>
+                <p>1951 (Alfa Romeo), 1954 (Maserati), 1955 (Mercedes), 1956 (Ferrari), 1957 (Ferrari)</p>
+            </div>
+            <div class="campione">
+                <h3>Alberto Ascari</h3>
+                <p>1952, 1953 (Ferrari)</p>
+            </div>
+            <div class="campione">
+                <h3>Mike Hawthorn</h3>
+                <p>1958 (Ferrari)</p>
+            </div>
+            <div class="campione">
+                <h3>Jack Brabham</h3>
+                <p>1959, 1960 (Cooper), 1966 (Brabham)</p>
+            </div>
+            <div class="campione">
+                <h3>Phil Hill</h3>
+                <p>1961 (Ferrari)</p>
+            </div>
+            <div class="campione">
+                <h3>Graham Hill</h3>
+                <p>1962 (BRM), 1968 (Lotus)</p>
+            </div>
+            <div class="campione">
+                <h3>Jim Clark</h3>
+                <p>1963 (Lotus), 1965 (Lotus)</p>
+            </div>
+            <div class="campione">
+                <h3>John Surtees</h3>
+                <p>1964 (Ferrari)</p>
+            </div>
+			<div class="campione">
+                <h3>Danny Hulme</h3>
+                <p>1967 (McLaren)</p>
+            </div>
+            <div class="campione">
+                <h3>Jackie Stewart</h3>
+                <p>1969 (Matra), 1971 (Tyrrell), 1973 (Tyrrell)</p>
+            </div>
+			<div class="campione">
+                <h3>Jochen Rindt</h3>
+                <p>1970 (Lotus)</p>
+            </div>
+			<div class="campione">
+                <h3>Emerson Fittipaldi</h3>
+                <p>1972 (Lotus), 1974 (McLaren)</p>
+            </div>
+            <div class="campione">
+                <h3>Niki Lauda</h3>
+                <p>1975 (Ferrari), 1977 (Ferrari), 1984 (McLaren)</p>
+            </div>
+			<div class="campione">
+                <h3>James Hunt</h3>
+                <p>1976 (McLaren)</p>
+            </div>
+			<div class="campione">
+                <h3>Mario Andretti</h3>
+                <p>1978 (Lotus)</p>
+            </div>
+			<div class="campione">
+                <h3>Jody Scheckter</h3>
+                <p>1979 (Ferrari)</p>
+            </div>
+			<div class="campione">
+                <h3>Alan Jones</h3>
+                <p>1980 (Williams)</p>
+            </div>
+			<div class="campione">
+                <h3>Nelson Piquet</h3>
+                <p>1983 (Brabham), 1983, 1987</p>
+            </div>
+			<div class="campione">
+                <h3>Keke Rosberg</h3>
+                <p>1982 (Williams)</p>
+            </div>
+			<div class="campione">
+                <h3>Alain Prost</h3>
+                <p>1985 (McLaren), 1986 (McLaren), 1989 (McLaren), 1993 (Ferrari)</p>
+            </div>
+            <div class="campione">
+                <h3>Ayrton Senna</h3>
+                <p>1988 (McLaren), 1990 (McLaren), 1991 (McLaren)</p>
+            </div>
+			<div class="campione">
+                <h3>Nigel Mansell</h3>
+                <p>1992 (Williams)</p>
+            </div>
+            <div class="campione">
+                <h3>Michael Schumacher</h3>
+                <p>1994 (Benetton), 1995 (Benetton), 2000 (Ferrari), 2001 (Ferrari), 2002 (Ferrari), 2003 (Ferrari), 2004 (Ferrari)</p>
+            </div>
+			<div class="campione">
+                <h3>Damon Hill</h3>
+                <p>1996 (Williams)</p>
+            </div>
+			<div class="campione">
+                <h3>Jacques Villeneuve</h3>
+                <p>1997 (Williams)</p>
+            </div>
+			<div class="campione">
+                <h3>Mika Häkkinen</h3>
+                <p>1998 (McLaren), 1999</p>
+            </div>
+            <div class="campione">
+                <h3>Fernando Alonso</h3>
+                <p>2005 (Renault), 2006 (Renault)</p>
+            </div>
+            <div class="campione">
+                <h3>Kimi Räikkönen</h3>
+                <p>2007 (Ferrari)</p>
+            </div>
+            <div class="campione">
+                <h3>Lewis Hamilton</h3>
+                <p>2008 (McLaren), 2014 , 2015 , 2017 , 2018 , 2019 , 2020 (Mercedes)</p>
+            </div>
+			<div class="campione">
+                <h3>Jenson Button</h3>
+                <p>2009 (Brawn)</p>
+            </div>
+            <div class="campione">
+                <h3>Sebastian Vettel</h3>
+                <p>2010 (Red Bull), 2011 (Red Bull), 2012 (Red Bull), 2013 (Red Bull)</p>
+            </div>
+			<div class="campione">
+                <h3>Nico Rosberg</h3>
+                <p>2016 (Mercedes)</p>
+            </div>
+            <div class="campione">
+                <h3>Max Verstappen</h3>
+                <p>2021 (Red Bull), 2022 (Red Bull), 2023 (Red Bull), 2024 (Red Bull)</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Da Alex Casson e Igor Berton.</p>
+        <a href="index.html">Pagina principale</a>
+	</footer>
+
+    <!-- Pulsante cambio tema -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+        🌙
+    </button>
+
+    <!-- Script per il cambio tema -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

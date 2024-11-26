@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piloti di Formula 1 2024</title>
+    <style>
+        /* Variabili CSS */
+        :root {
+            --background-light: #f5f5f5;
+            --background-dark: #1c1c1c;
+            --text-light: #000;
+            --text-dark: #fff;
+            --primary-color: #ff0000;
+            --accent-color: #ff5722;
+            --card-bg-light: #fff;
+            --card-bg-dark: #2e2e2e;
+            --button-hover: #d32f2f;
+        }
+
+        /* Stile globale */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--text-dark);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Contenuto principale */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        section#piloti {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pilota {
+            background: var(--card-bg-light);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pilota h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .pilota p {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .pilota:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .pilota a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px;
+        }
+
+        /* Tema scuro */
+        .dark-mode {
+            --background-light: #121212;
+            --text-light: #fff;
+            --card-bg-light: #2e2e2e;
+            --primary-color: #ff5722;
+            --accent-color: #e64a19;
+            --button-hover: #b71c1c;
+        }
+
+        /* Pulsante cambio tema */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--button-hover);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .pilota h3 {
+                font-size: 1.3rem;
+            }
+
+            .pilota p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Piloti di Formula 1 2024</h1>
+    </header>
+
+    <!-- Contenuto principale -->
+    <main>
+        <section id="piloti">
+            <div class="pilota">
+                <a href="hamilton.html">
+                    <h3>Lewis Hamilton</h3>
+                    <p>Mercedes</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="russell.html">
+                    <h3>George Russell</h3>
+                    <p>Mercedes</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="verstappen.html">
+                    <h3>Max Verstappen</h3>
+                    <p>Red Bull</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="perez.html">
+                    <h3>Sergio Perez</h3>
+                    <p>Red Bull</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="leclerc.html">
+                    <h3>Charles Leclerc</h3>
+                    <p>Ferrari</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="sainz.html">
+                    <h3>Carlos Sainz</h3>
+                    <p>Ferrari</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="norris.html">
+                    <h3>Lando Norris</h3>
+                    <p>McLaren</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="piastri.html">
+                    <h3>Oscar Piastri</h3>
+                    <p>McLaren</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="ocon.html">
+                    <h3>Estevan Ocon</h3>
+                    <p>Alpine</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="gasly.html">
+                    <h3>Pierre Gasly</h3>
+                    <p>Alpine</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="tsunoda.html">
+                    <h3>Yuki Tsunoda</h3>
+                    <p>AlphaTauri</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="lawson.html">
+                    <h3>Liam Lawson</h3>
+                    <p>AlphaTauri</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="colapinto.html">
+                    <h3>Franco Colapinto</h3>
+                    <p>Williams</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="albon.html">
+                    <h3>Alexander Albon</h3>
+                    <p>Williams</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="bottas.html">
+                    <h3>Valtteri Bottas</h3>
+                    <p>Stake Sauber</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="zhou.html">
+                    <h3>Guanyu Zhou</h3>
+                    <p>Stake Sauber</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="alonso.html">
+                    <h3>Fernando Alonso</h3>
+                    <p>Aston Martin</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="stroll.html">
+                    <h3>Lance Stroll</h3>
+                    <p>Aston Martin</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="hulkenberg.html">
+                    <h3>Nico Hulkenberg</h3>
+                    <p>Haas</p>
+                </a>
+            </div>
+            <div class="pilota">
+                <a href="magnussen.html">
+                    <h3>Kevin Magnussen</h3>
+                    <p>Haas</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Da Alex Casson e Igor Berton.</p>
+        <a href="index.html">Pagina principale</a>
+	</footer>
+
+    <!-- Pulsante cambio tema -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+        🌙
+    </button>
+
+    <!-- Script per il cambio tema -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
